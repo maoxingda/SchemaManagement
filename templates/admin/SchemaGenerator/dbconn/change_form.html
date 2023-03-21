@@ -1,0 +1,13 @@
+{% extends 'admin/change_form.html' %}
+
+{% block extrahead %}{{ block.super }}
+    <script>
+        django.jQuery(function () {
+            const pathname_segs = location.pathname.split('/');
+            const obj_id = pathname_segs[pathname_segs.length - 3];
+            django.jQuery('#id_btn_export').attr('href', `/schema-generator/dbconn/${obj_id}/generate/`);
+            django.jQuery('#id_btn_create_ods_table_ddl').attr('href', `/schema-generator/dbconn/${obj_id}/redshift/generate/?schema=ods`);
+            django.jQuery('#id_btn_create_emr_table_ddl').attr('href', `/schema-generator/dbconn/${obj_id}/redshift/generate/?schema=emr`);
+        });
+    </script>
+{% endblock %}
