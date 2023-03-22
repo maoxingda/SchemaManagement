@@ -31,8 +31,8 @@ def schema_generate(request, dbconn_id):
         }}
     ''')
 
-    # with open('/Users/maoxd/open-source/my-terraform/locals.tf', 'w') as f:
-    #     f.write(locals_template)
+    with open('/Users/maoxd/open-source/my-terraform/main-sync-schema-locals.tf', 'w') as f:
+        f.write(locals_template)
 
     messages.info(request, mark_safe(f'<pre>{locals_template}</pre>'))
 

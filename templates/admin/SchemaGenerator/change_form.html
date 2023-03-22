@@ -1,0 +1,12 @@
+{% extends 'admin/change_form.html' %}
+
+{% block extrastyle %}{{ block.super }}
+    <style>
+        input[type="text"] {
+            width: 30%;
+        }
+        td.original > p {
+            height: 0px !important;
+        }
+    </style>
+{% endblock %}

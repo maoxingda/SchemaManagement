@@ -35,6 +35,12 @@ class DbConn(models.Model):
 
 
 class Table(models.Model):
+    class Meta:
+        ordering = [
+            'conn',
+            'name',
+        ]
+
     name = models.CharField('表', max_length=128)
     conn = models.ForeignKey(DbConn, verbose_name='数据库地址', on_delete=models.CASCADE, related_name='tables')
 
