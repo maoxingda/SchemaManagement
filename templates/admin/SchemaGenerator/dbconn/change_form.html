@@ -8,6 +8,8 @@
             django.jQuery('#id_btn_export').attr('href', `/schema-generator/dbconn/${obj_id}/generate/`);
             django.jQuery('#id_btn_create_ods_table_ddl').attr('href', `/schema-generator/dbconn/${obj_id}/redshift/generate/?schema=ods`);
             django.jQuery('#id_btn_create_emr_table_ddl').attr('href', `/schema-generator/dbconn/${obj_id}/redshift/generate/?schema=emr`);
+            django.jQuery('#id_btn_create_ods_table').attr('href', `/schema-generator/dbconn/${obj_id}/redshift/create-table/?schema=ods`);
+            django.jQuery('#id_btn_create_emr_table').attr('href', `/schema-generator/dbconn/${obj_id}/redshift/create-table/?schema=emr`);
         });
     </script>
 {% endblock %}

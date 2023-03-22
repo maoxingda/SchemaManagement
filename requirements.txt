@@ -2,3 +2,4 @@ django-extensions
 ipython
 psycopg2-binary==2.9.1
 django-admin-decorators==0.1
+sqlparse
